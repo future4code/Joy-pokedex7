@@ -1,9 +1,9 @@
 # POKEDEX
 
 Nome dos integrantes: 
-- Pessoa 1
-- Pessoa 2
-- Pessoa 3
+- Matheus Grativol
+- Frederico Neves
+- Thayná Regina
 
 Link do Surge: www.link.com.br
 
