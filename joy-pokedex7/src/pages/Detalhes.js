@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const Detalhes = () => {
+
     const history = useHistory()
     const params = useParams()
     const [pokemon, setPokemon] = useState()
