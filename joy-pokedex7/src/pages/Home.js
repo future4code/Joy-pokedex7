@@ -1,23 +1,21 @@
 import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
-import PokemonContext from '../contexts/context';
+import { useEffect } from 'react';
+import PokemonContext from '../global/Context';
 import PokemonCard from '../components/PokemonCard';
 import { Pagination, Typography } from '@mui/material';
+import { GlobalState } from '../global/GlobalState';
 
 const Home = () => {
-    const { values } = useContext(PokemonContext)
-    const { setters } = useContext(PokemonContext)
-    const { getters } = useContext(PokemonContext)
+    const { states, setters, getters } = useContext(PokemonContext)
 
-    const pokemon = values.pokemon
+    const {pokemon, page, offset} = states;
+    const {setPokemon, setPage, setOffset} = setters
+    const {getPokemon} = getters
 
-    const offset = values.offset
-    const setOffset = setters.setOffset
-
-    const page = values.page
-    const setPage = setters.setPage
-
-    const getPokemon = getters.getPokemon
+    useEffect(()=>{
+        getPokemon()
+    }, [offset])
 
     const history = useHistory()
 

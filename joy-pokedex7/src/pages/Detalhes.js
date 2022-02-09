@@ -20,6 +20,7 @@ const Detalhes = () => {
             })
     }, [])
 
+    console.log(pokemon)
     return <div>
         <p>Detalhes</p>
     </div>;

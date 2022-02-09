@@ -1,4 +1,4 @@
-import react from "react";
+// import react from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
