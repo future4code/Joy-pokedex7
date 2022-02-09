@@ -8,7 +8,9 @@ function App() {
 
   const [pokemon, setPokemon] = useState([])
   const [page, setPage] = useState(1)
-  const [offset, setOffset] = useState()
+  const [offset, setOffset] = useState(0)
+  const [pokedex, setPokedex] = useState([])
+
   useEffect(() => {
     getPokemon()
   }, [offset])
@@ -17,7 +19,7 @@ function App() {
     axios.get(`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=20`)
       .then((response) => {
         setPokemon(response.data.results)
-        console.log(response.data);
+        // console.log(response.data);
       })
       .catch((err) => {
         alert(err)
@@ -26,21 +28,19 @@ function App() {
 
   const values = {
     pokemon,
-    offset,
-    page
+    page,
+    pokedex
   }
 
   const setters = {
     setOffset,
     setPage,
-  }
-
-  const getters = {
-    getPokemon
+    setPokedex,
+    setPokemon
   }
 
   return (
-    <PokemonContext.Provider value={{ values, setters, getters }}>
+    <PokemonContext.Provider value={{ values, setters }}>
       <Router />
     </PokemonContext.Provider>
   );

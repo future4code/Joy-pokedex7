@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { useContext } from "react";
 import PokemonContext from "../contexts/context";
 
-const PokemonCard = (props) => {
+const PokemonCardPokedex = (props) => {
 
   const [pokemon, setPokemon] = useState()
   const history = useHistory()
@@ -34,9 +34,11 @@ const PokemonCard = (props) => {
     url: props.url
   }
 
-  const addToPokedex = () => {
-    setPokedex([...pokedex, pokemonData])
-    alert(`${pokemon.name} adicionado à pokedex!`)
+  const removeFromPokedex = () => {
+    setPokedex(pokedex.filter((poke) => {
+      return !pokedex.some(e => e.url === poke.url)
+    }))
+    alert(`${pokemon.name} removido da pokedex!`)
   }
 
   if (pokemon) {
@@ -44,7 +46,7 @@ const PokemonCard = (props) => {
       <div>
         <img src={pokemon.sprites.front_default} alt={pokemon.name} />
         <p>{pokemon.name}</p>
-        <button onClick={addToPokedex}>Adicionar</button>
+        <button onClick={removeFromPokedex}>Remover</button>
         <button onClick={goToDetalhes}>Detalhes</button>
       </div>
     )
@@ -58,4 +60,4 @@ const PokemonCard = (props) => {
 
 }
 
-export default PokemonCard
+export default PokemonCardPokedex
