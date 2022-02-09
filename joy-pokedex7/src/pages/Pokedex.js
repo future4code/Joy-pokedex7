@@ -2,7 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { useContext, useEffect } from 'react';
 import PokemonContext from '../contexts/context';
-import PokemonCard from '../components/PokemonCard';
+import PokemonCardPokedex from '../components/PokemonCardPokedex';
 import { Typography } from '@mui/material';
 import { Pagination } from '@mui/material';
 
@@ -22,7 +22,7 @@ const Pokedex = () => {
 
     const cardsPoke = pokedex.map((poke) => {
         return (
-            <PokemonCard key={poke.name} url={poke.url} />
+            <PokemonCardPokedex key={poke.name} url={poke.url} />
         )
     })
 

@@ -24,11 +24,9 @@ const Home = () => {
 
 
     const cardsPoke = pokemon.filter((poke) => {
-        console.log("Pokedex", pokedex);
-        return poke !== pokedex
+        return (!pokedex.some(e => e.url === poke.url))
     })
         .map((poke) => {
-            console.log("Poke", poke);
             return (
                 <PokemonCard key={poke.name} url={poke.url} name={poke.name} />
             )
