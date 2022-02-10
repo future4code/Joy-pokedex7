@@ -25,7 +25,6 @@ const Pokedex = () => {
         )
     })
 
-
     const removePokedex = () => {
         setPokedex([])
     }
@@ -37,9 +36,10 @@ const Pokedex = () => {
     const handleChange = (event, value) => {
         setPage(value)
     }
+    // console.log("Actual", pokedex);
 
+    if (pokedex.length !== 0) {
 
-    if (pokedex) {
         return <div>
             <p>Pokedex</p>
             <button onClick={goToHome}>Ir para Home</button>
@@ -50,7 +50,12 @@ const Pokedex = () => {
         </div>;
     } else {
         return <div>
+            <p>Pokedex</p>
+            <button onClick={goToHome}>Ir para Home</button>
+            <button onClick={removePokedex}>Esvaziar pokedex</button>
             <p>Nenhum pokemon adicionado</p>
+            <Typography>Página: {page}</Typography>
+            <Pagination count={Math.ceil(count)} variant="outlined" color="primary" shape='rounded' page={page} onChange={handleChange} />
         </div>
     }
 

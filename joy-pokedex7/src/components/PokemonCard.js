@@ -9,19 +9,22 @@ const PokemonCard = (props) => {
 
   const [pokemon, setPokemon] = useState()
   const history = useHistory()
-  const { states,setters } = useContext(PokemonContext)
+  const { states, setters } = useContext(PokemonContext)
 
   const pokedex = states.pokedex
   const setPokedex = setters.setPokedex
 
   useEffect(() => {
-    axios.get(props.url)
-      .then((res) => {
-        setPokemon(res.data)
-      })
-      .catch((err) => {
-        alert(err)
-      })
+    if (props) {
+      axios.get(props.url)
+        .then((res) => {
+          setPokemon(res.data)
+        })
+        .catch((err) => {
+          alert(err)
+        })
+    }
+
   }, [])
 
   const goToDetalhes = () => {
@@ -37,7 +40,6 @@ const PokemonCard = (props) => {
     setPokedex([...pokedex, pokemonData])
     alert(`${pokemon.name} adicionado à pokedex!`)
   }
-
   if (pokemon) {
     return (
       <div>
@@ -47,11 +49,10 @@ const PokemonCard = (props) => {
         <button onClick={goToDetalhes}>Detalhes</button>
       </div>
     )
-  } else {
+  }
+  else {
     return (
-      <div>
-        Loading...
-      </div>
+      <></>
     )
   }
 
