@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useHistory,} from 'react-router-dom';
+import { useHistory, } from 'react-router-dom';
 import { useEffect } from 'react';
 import PokemonContext from '../global/Context';
 import PokemonCard from '../components/PokemonCard';
@@ -8,14 +8,14 @@ import { Pagination, Typography } from '@mui/material';
 const Home = () => {
     const { states, setters, getters } = useContext(PokemonContext)
 
-    const {pokemon, page, offset, pokedex} = states
-    const {setPokemon, setPage, setOffset, setPokedex} = setters
-    const {getPokemon} = getters
+    const { pokemon, page, offset, pokedex } = states
+    const { setPokemon, setPage, setOffset, setPokedex } = setters
+    const { getPokemon } = getters
 
-    useEffect(()=>{
+    useEffect(() => {
         getPokemon()
     }, [offset])
-    
+
     const history = useHistory()
 
     const goToPokedex = () => {
@@ -41,13 +41,22 @@ const Home = () => {
 
 
     // console.log(pokemon);
-    return <div>
-        <p>Home</p>
-        <button onClick={goToPokedex}>Ir para Pokedex</button>
-        {cardsPoke}
-        <Typography>Página: {page}</Typography>
-        <Pagination count={56} variant="outlined" color="primary" shape='rounded' page={page} onChange={handleChange} />
-    </div>;
+    if (pokemon.length !== 0) {
+        return <div>
+            <p>Home</p>
+            <button onClick={goToPokedex}>Ir para Pokedex</button>
+            {cardsPoke}
+            <Typography>Página: {page}</Typography>
+            <Pagination count={56} variant="outlined" color="primary" shape='rounded' page={page} onChange={handleChange} />
+        </div>;
+    } else {
+        return (
+            <div>
+                <h1>Loading...</h1>
+            </div>
+        )
+    }
+
 };
 
 export default Home;

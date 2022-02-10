@@ -8,6 +8,7 @@ import PokemonContext from "../global/Context";
 const PokemonCardPokedex = (props) => {
 
   const [pokemon, setPokemon] = useState()
+  const [removePokemon, setRemovePokemon] = useState({})
   const history = useHistory()
   const { states, setters } = useContext(PokemonContext)
 
@@ -22,7 +23,7 @@ const PokemonCardPokedex = (props) => {
       .catch((err) => {
         alert(err)
       })
-  }, [])
+  }, [pokedex])
 
   const goToDetalhes = () => {
     history.push(`/detalhes/${pokemon.name}`)
@@ -33,11 +34,11 @@ const PokemonCardPokedex = (props) => {
     url: props.url
   }
 
-  const removeFromPokedex = () => {
-    setPokedex(pokedex.filter((poke) => {
-      return !pokedex.some(e => e.url === poke.url)
-    }))
-    alert(`${pokemon.name} removido da pokedex!`)
+  const rmvPoke = (name) => {
+    const pokem = pokedex.filter((pokemon) => {
+      return pokemon.name !== name
+    })
+    setPokedex(pokem)
   }
 
   if (pokemon) {
@@ -45,15 +46,13 @@ const PokemonCardPokedex = (props) => {
       <div>
         <img src={pokemon.sprites.front_default} alt={pokemon.name} />
         <p>{pokemon.name}</p>
-        <button onClick={removeFromPokedex}>Remover</button>
+        <button onClick={() => rmvPoke(pokemon.name)}>Remover</button>
         <button onClick={goToDetalhes}>Detalhes</button>
       </div>
     )
   } else {
     return (
-      <div>
-        Loading...
-      </div>
+      <></>
     )
   }
 
