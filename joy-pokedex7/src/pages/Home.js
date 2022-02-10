@@ -1,21 +1,21 @@
 import React, { useContext } from 'react';
-import { useHistory } from 'react-router-dom';
-import PokemonContext from '../contexts/context';
+import { useHistory,} from 'react-router-dom';
+import { useEffect } from 'react';
+import PokemonContext from '../global/Context';
 import PokemonCard from '../components/PokemonCard';
 import { Pagination, Typography } from '@mui/material';
 
 const Home = () => {
-    const { values } = useContext(PokemonContext)
-    const { setters } = useContext(PokemonContext)
+    const { states, setters, getters } = useContext(PokemonContext)
 
-    const pokemon = values.pokemon
-    const pokedex = values.pokedex
+    const {pokemon, page, offset, pokedex} = states
+    const {setPokemon, setPage, setOffset, setPokedex} = setters
+    const {getPokemon} = getters
 
-    const setOffset = setters.setOffset
-
-    const page = values.page
-    const setPage = setters.setPage
-
+    useEffect(()=>{
+        getPokemon()
+    }, [offset])
+    
     const history = useHistory()
 
     const goToPokedex = () => {
