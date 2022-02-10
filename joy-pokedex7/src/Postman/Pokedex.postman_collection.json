@@ -9,7 +9,20 @@
 			"name": "GetPokemons",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/pokemon",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"pokemon"
+					]
+				}
 			},
 			"response": []
 		},
@@ -17,7 +30,21 @@
 			"name": "GetPokemonDetalhes",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/pokemon/bulbasaur",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"pokemon",
+						"bulbasaur"
+					]
+				}
 			},
 			"response": []
 		}

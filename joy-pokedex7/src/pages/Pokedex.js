@@ -1,21 +1,20 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { useContext, useEffect } from 'react';
-import PokemonContext from '../contexts/context';
+import PokemonContext from '../global/Context';
 import PokemonCardPokedex from '../components/PokemonCardPokedex';
 import { Typography } from '@mui/material';
 import { Pagination } from '@mui/material';
 
 const Pokedex = () => {
-    const { values } = useContext(PokemonContext)
-    const { setters } = useContext(PokemonContext)
+    const { states, setters } = useContext(PokemonContext)
 
-    const pokedex = values.pokedex
+    const pokedex = states.pokedex
     const setPokedex = setters.setPokedex
 
     const count = (pokedex.length / 20)
 
-    const page = values.page
+    const page = states.page
     const setPage = setters.setPage
 
     const history = useHistory()
