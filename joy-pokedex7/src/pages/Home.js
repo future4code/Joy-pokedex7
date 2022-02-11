@@ -4,6 +4,8 @@ import { useEffect } from 'react';
 import PokemonContext from '../global/Context';
 import PokemonCard from '../components/PokemonCard';
 import { Pagination, Typography } from '@mui/material';
+import Header from "../components/Header"
+import { ContainerHome } from "./styled";
 
 const Home = () => {
     const { states, setters, getters } = useContext(PokemonContext)
@@ -43,11 +45,12 @@ const Home = () => {
     // console.log(pokemon);
     if (pokemon.length !== 0) {
         return <div>
-            <p>Home</p>
-            <button onClick={goToPokedex}>Ir para Pokedex</button>
+            <Header />
+            <ContainerHome>
             {cardsPoke}
+            </ContainerHome>
             <Typography>Página: {page}</Typography>
-            <Pagination count={56} variant="outlined" color="primary" shape='rounded' page={page} onChange={handleChange} />
+            <Pagination count={20} variant="outlined" color="primary" shape='rounded' page={page} onChange={handleChange} />
         </div>;
     } else {
         return (
