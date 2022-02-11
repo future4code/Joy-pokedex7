@@ -52,7 +52,7 @@ const PokemonCardPokedex = (props) => {
     )
   } else {
     return (
-      <></>
+      <h1>Loading...</h1>
     )
   }
 

@@ -8,7 +8,7 @@ const Detalhes = () => {
     const history = useHistory()
     const params = useParams()
     const [pokemon, setPokemon] = useState()
-    // console.log(pokemon)
+    console.log(pokemon)
 
     useEffect(() => {
         axios.get(`https://pokeapi.co/api/v2/pokemon/${params.pokemon}`)
@@ -30,31 +30,31 @@ const Detalhes = () => {
                 </div>
                 <div>
                     <h3>Poderes</h3>
-                    <p><b>hp:</b></p>
-                    <p><b>attack:</b></p>
-                    <p><b>defense:</b></p>
-                    <p><b>special-attack:</b></p>
-                    <p><b>special-defense:</b></p>
-                    <p><b>speed:</b></p>
+                    <p><b>hp:</b> {pokemon.stats [0].base_stat}</p>
+                    <p><b>attack:</b> {pokemon.stats [1].base_stat}</p>
+                    <p><b>defense:</b> {pokemon.stats [2].base_stat}</p>
+                    <p><b>special-attack:</b> {pokemon.stats [3].base_stat}</p>
+                    <p><b>special-defense:</b> {pokemon.stats [4].base_stat}</p>
+                    <p><b>speed:</b> {pokemon.stats [5].base_stat}</p>
                 </div>
                 <div>
                     <div>
-                        <p></p>
-                        <p></p>
+                        <p>{pokemon.types [0].type.name}</p>
+                        <p>{pokemon.types [1].type.name}</p>
                     </div>
                     <div>
                         <h3>Principais ataques</h3>
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                        <p></p>
+                        <p>{pokemon.moves [0].move.name}</p>
+                        <p>{pokemon.moves [1].move.name}</p>
+                        <p>{pokemon.moves [2].move.name}</p>
+                        <p>{pokemon.moves [3].move.name}</p>
+                        <p>{pokemon.moves [4].move.name}</p>
                     </div>
                 </div>
             </div>
         )
     } else {
-        return <></>
+        return <h1>Loading...</h1>
     }
 
 };
