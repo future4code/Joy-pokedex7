@@ -8,7 +8,6 @@ import PokemonContext from "../global/Context";
 const PokemonCardPokedex = (props) => {
 
   const [pokemon, setPokemon] = useState()
-  const [removePokemon, setRemovePokemon] = useState({})
   const history = useHistory()
   const { states, setters } = useContext(PokemonContext)
 
