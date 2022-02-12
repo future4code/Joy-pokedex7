@@ -18,33 +18,30 @@ width: 100vw;
 background: linear-gradient(45deg, #0d30a8, #d7f9c1);
 display: flex;
 align-items: center;
-justify-content: center;
+justify-content: space-evenly;
 color: white;
 position: relative;
-h1 {
-  margin-left: 38vw;  
-}
 img {
-  height: 15vh;
-  width: 20vw;
-}
+     max-height: 15vh;
+     max-width: 40vw;
+    }
 `
+
 
 const Button = styled.button`
 margin: 0 10px 0 10px;
 background: #0d30a8;
-border-radius: 999px;
 box-shadow: #0d30a8 0 10px 20px -10px;
 box-sizing: border-box;
+border-radius: 999px;
 color: #FFFFFF;
 font-size: 16px;
 font-weight: 700;
 line-height: 24px;
 opacity: 1;
 outline: 0 solid transparent;
-padding: 8px 30px;
+padding: 8px 10px;
 `
-
 const Home = () => {
     const { states, setters, getters } = useContext(PokemonContext)
 
@@ -91,7 +88,7 @@ const Home = () => {
                 <Button onClick={goToPokedex}>
                     Pokedex
                 </Button>
-                <img src={logo} alt="" />
+                <img src={logo} alt="Logotipo pokemon" />
                 <Button onClick={removePokedex}>
                     Esvaziar Pokedex
                 </Button>
