@@ -9,9 +9,10 @@ link Surge: joyous-apparatus.surge.sh
 
 
 
-![pokedex cheia](https://user-images.githubusercontent.com/79390113/153718281-87da66f5-b12d-45cb-bd07-de274e645dd3.png)
+
 
 ![home](https://user-images.githubusercontent.com/79390113/153718285-6d93e651-f159-423c-abdc-5d50e94d6ae3.png)
+![pokedex cheia](https://user-images.githubusercontent.com/79390113/153718281-87da66f5-b12d-45cb-bd07-de274e645dd3.png)
 ![detalhes](https://user-images.githubusercontent.com/79390113/153718286-83a0e06c-0558-4d3e-b26e-11dc1caf461f.png)
 ![pokedex vazia](https://user-images.githubusercontent.com/79390113/153718288-6d0da415-7a0f-4122-8c5d-bc31720fd868.png)
 
