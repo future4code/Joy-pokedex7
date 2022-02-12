@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import logo from "../assents/Logo.png";
 
-const Header = ({buttonFunction, pageName}) => {
+const Header = ({ buttonFunction, pageName }) => {
 
- 
+
   const Header = styled.header`
       height: 18vh;
       background: linear-gradient(45deg, #0d30a8, #d7f9c1);
@@ -21,7 +21,7 @@ const Header = ({buttonFunction, pageName}) => {
         width: 20vw;
       }
   `
-  
+
   const Button = styled.button`
       margin: 0 10px 0 10px;
       background: #0d30a8;
@@ -36,7 +36,7 @@ const Header = ({buttonFunction, pageName}) => {
       outline: 0 solid transparent;
       padding: 8px 30px;
   
-      }
+      
   `
 
   const ButtonText = () => {
@@ -54,10 +54,10 @@ const Header = ({buttonFunction, pageName}) => {
     <Header>
       <h1>{pageName}</h1>
       <img src={logo} alt="" />
-       {/* <Button onClick={buttonFunction}>
+      {/* <Button onClick={buttonFunction}>
         {ButtonText()}
       </Button> */}
-      
+
     </Header>
   )
 }
