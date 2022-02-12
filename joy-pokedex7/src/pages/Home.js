@@ -97,7 +97,7 @@ const Home = () => {
                 {cardsPoke}
             </ContainerHome>
             <Pagina>
-                <Pagination count={9} variant="outlined" color="primary" shape='rounded' page={page} onChange={handleChange} />
+                <Pagination count={56} variant="outlined" color="primary" shape='rounded' page={page} onChange={handleChange} />
                 <Typography>Página: {page}</Typography>
             </Pagina>
         </Container>;
