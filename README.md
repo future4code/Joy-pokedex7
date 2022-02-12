@@ -1,4 +1,4 @@
-## ## ## ## ## ## ## ## ## ## ## ## ##    ![images-removebg-preview (4)](https://user-images.githubusercontent.com/79390113/153718296-0e7c9f78-bfbe-43cf-bd34-90f6c709fe72.png) 
+![images-removebg-preview (4)](https://user-images.githubusercontent.com/79390113/153718296-0e7c9f78-bfbe-43cf-bd34-90f6c709fe72.png) 
 
 
 #Projeto Pokedex
