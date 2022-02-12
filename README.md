@@ -3,7 +3,7 @@
 
 #Projeto Pokedex
 
-A ideia é que usemos a [Poke Api](https://pokeapi.co/) como fonte de dados para o projeto. Ela é uma API pública, bastante utilizada como fonte de dados para aplicações focadas em aprendizado de programação. É também uma API particularmente comum em Cases de Processos Seletivos. 
+A ideia proposta pelo curso Labenu foi usar a [Poke Api](https://pokeapi.co/) como fonte de dados para o projeto. Ela é uma API pública, bastante utilizada como fonte de dados para aplicações focadas em aprendizado de programação. É também uma API particularmente comum em Cases de Processos Seletivos. 
 
 link Surge: joyous-apparatus.surge.sh
 
