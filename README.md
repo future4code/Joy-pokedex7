@@ -1,19 +1,17 @@
-# Projeto Pokedex
+![images-removebg-preview (4)](https://user-images.githubusercontent.com/79390113/153718296-0e7c9f78-bfbe-43cf-bd34-90f6c709fe72.png)
+#Projeto Pokedex
 
 A ideia é que usemos a [Poke Api](https://pokeapi.co/) como fonte de dados para o projeto. Ela é uma API pública, bastante utilizada como fonte de dados para aplicações focadas em aprendizado de programação. É também uma API particularmente comum em Cases de Processos Seletivos. 
 
 link Surge: joyous-apparatus.surge.sh
 
 
-https://files.slack.com/files-pri/TLAVDH7C2-F032DLYQQ87/home.png
 
-https://files.slack.com/files-pri/TLAVDH7C2-F032DLYSF71/pokedex_cheia.png
+![pokedex cheia](https://user-images.githubusercontent.com/79390113/153718281-87da66f5-b12d-45cb-bd07-de274e645dd3.png)
 
-https://files.slack.com/files-pri/TLAVDH7C2-F032U9CU1K4/detalhes.png
-
-https://files.slack.com/files-pri/TLAVDH7C2-F032U9CU1K4/detalhes.png
-
-
+![home](https://user-images.githubusercontent.com/79390113/153718285-6d93e651-f159-423c-abdc-5d50e94d6ae3.png)
+![detalhes](https://user-images.githubusercontent.com/79390113/153718286-83a0e06c-0558-4d3e-b26e-11dc1caf461f.png)
+![pokedex vazia](https://user-images.githubusercontent.com/79390113/153718288-6d0da415-7a0f-4122-8c5d-bc31720fd868.png)
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
