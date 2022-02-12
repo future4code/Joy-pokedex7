@@ -5,7 +5,7 @@ import PokemonContext from '../global/Context';
 import PokemonCard from '../components/PokemonCard';
 import { Pagination, Typography } from '@mui/material';
 import Header from "../components/Header"
-import { ContainerHome } from "./styled";
+import { ContainerHome,Pagina } from "./styled";
 
 const Home = () => {
     const { states, setters, getters } = useContext(PokemonContext)
@@ -49,8 +49,12 @@ const Home = () => {
             <ContainerHome>
             {cardsPoke}
             </ContainerHome>
+            <Pagina>    
+            <Pagination count={9} variant="outlined" color="primary" shape='rounded' page={page} onChange={handleChange} />
             <Typography>Página: {page}</Typography>
-            <Pagination count={20} variant="outlined" color="primary" shape='rounded' page={page} onChange={handleChange} />
+            </Pagina>
+           
+            
         </div>;
     } else {
         return (

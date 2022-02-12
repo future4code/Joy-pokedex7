@@ -6,8 +6,8 @@ const Header = ({buttonFunction, pageName}) => {
 
  
   const Header = styled.header`
-      height: 15vh;
-      background-color:#ffc222;
+      height: 18vh;
+      background: linear-gradient(45deg, #0d30a8, #d7f9c1);
       display: flex;
       align-items: center;
       color: white;
@@ -17,16 +17,16 @@ const Header = ({buttonFunction, pageName}) => {
         
       }
       img {
-        height: 12vh;
-        width: 13vw;
+        height: 15vh;
+        width: 20vw;
       }
   `
   
   const Button = styled.button`
       margin: 0 10px 0 10px;
-      background: #bf0000;
+      background: #0d30a8;
       border-radius: 999px;
-      box-shadow: #bf0000 0 10px 20px -10px;
+      box-shadow: #0d30a8 0 10px 20px -10px;
       box-sizing: border-box;
       color: #FFFFFF;
       font-size: 16px;
@@ -52,11 +52,12 @@ const Header = ({buttonFunction, pageName}) => {
 
   return (
     <Header>
-      <Button onClick={buttonFunction}>
-        {ButtonText()}
-      </Button>
       <h1>{pageName}</h1>
       <img src={logo} alt="" />
+       {/* <Button onClick={buttonFunction}>
+        {ButtonText()}
+      </Button> */}
+      
     </Header>
   )
 }
