@@ -1,7 +1,7 @@
 ![images-removebg-preview (4)](https://user-images.githubusercontent.com/79390113/153718296-0e7c9f78-bfbe-43cf-bd34-90f6c709fe72.png) 
 
 
-#Projeto Pokedex
+#Projeto Pokedex.
 
 A ideia proposta pelo curso Labenu foi usar a [Poke Api](https://pokeapi.co/) como fonte de dados para o projeto. Ela é uma API pública, bastante utilizada como fonte de dados para aplicações focadas em aprendizado de programação. É também uma API particularmente comum em Cases de Processos Seletivos. 
 
